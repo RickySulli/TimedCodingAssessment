@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donezo!🤓</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+        <h1 id="finalScore"></h1>
+        <form>
+            <input type="text"
+            name= "username"
+            id="username"
+            placeholder="username"
+            />
+            <button type="submit" 
+            class="btn" 
+            id="saveScoreBtn"
+            onclick="saveHighScore(event)"
+            disabled
+            >
+            Save Your Score!💾
+        </button>
+        </form>
+        <a class = "btn" href="/game.html">Play Again!🕹️</a>
+        <a class = "btn" href="/">Quit Trying!🚫</a>
+    </div>
+ </div>     
+    <script src="/assets/js/end.js"></script> 
+</body>
+</html>
