@@ -5,6 +5,7 @@
     font-size: 1.8rem;
     border: 0.1rem solid rgba(55, 79, 117 0.3);
     background-color: rgb(185, 149, 123);
+    border-radius: 35% 8%;
 }
 .choice-container:hover{
     cursor: pointer;
@@ -16,6 +17,7 @@
     padding:1.5rem 2.5rem;
     background-color: rgba(55, 79, 117); 
     color: beige;
+    border-radius: 85% 10%;
 }
 .choice-text{
     padding: 1.3rem;
