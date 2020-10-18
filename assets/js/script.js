@@ -8,6 +8,19 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+
+var timeleft = 75;
+var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("time-left").innerHTML = "Finished";
+  } else {
+    document.getElementById("time-left").innerHTML = timeleft;
+  }
+  timeleft -= 1;
+}, 1000);
+
+
 let questions = [
 
     {
@@ -15,7 +28,7 @@ let questions = [
             choice1: "<scripz>",
             choice2: "<javascript>",
             choice3: "<js>",
-            choice4: "<skript>",
+            choice4: "<script>",
         answer: 4
     },
     {
@@ -91,13 +104,21 @@ let questions = [
         answer: 3
     }
 ]
+
+
+
+
 const correctPoints = 10;
 const maxQuestions = 10;
+document.addEventListener('DOMContentLoaded', () =>{
+ 
 
-
+    
+})
 startGame = () => {
     questionCounter = 0;
     score = 0;
+    timer = 75;
     availableQuestions = [...questions];
     
     getNewQuestion();
