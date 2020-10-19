@@ -25,9 +25,9 @@ let questions = [
 
     {
         question:  "Inside which HTML element do we put the Javascript?",
-            choice1: "<scripz>",
+            choice1: "<js>",
             choice2: "<javascript>",
-            choice3: "<js>",
+            choice3: "<skripz>",
             choice4: "<script>",
         answer: 4
     },
