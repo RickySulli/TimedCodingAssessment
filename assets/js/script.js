@@ -9,17 +9,17 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-var timeleft = 75;
-var downloadTimer = setInterval(function(){
+var timeleft = 60;
+var Timer = setInterval(function(){
   if(timeleft <= 0){
-    clearInterval(downloadTimer);
+    clearInterval(Timer);
     document.getElementById("time-left").innerHTML = "Finished";
+    window.location.assign('/end.html');
   } else {
     document.getElementById("time-left").innerHTML = timeleft;
   }
   timeleft -= 1;
 }, 1000);
-
 
 let questions = [
 
@@ -105,20 +105,11 @@ let questions = [
     }
 ]
 
-
-
-
 const correctPoints = 10;
 const maxQuestions = 10;
-document.addEventListener('DOMContentLoaded', () =>{
- 
-
-    
-})
 startGame = () => {
     questionCounter = 0;
     score = 0;
-    timer = 75;
     availableQuestions = [...questions];
     
     getNewQuestion();
@@ -164,7 +155,7 @@ getNewQuestion = () => {
             setTimeout(() => {
                 selectedChoice.parentElement.classList.remove(classToApply);
                 getNewQuestion();
-            }, 800);
+            }, 300);
  
            });
 
