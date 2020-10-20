@@ -1,4 +1,4 @@
-let questions = [
+[
 
     {
         "question" :   "Inside which HTML element do we put the Javascript?",

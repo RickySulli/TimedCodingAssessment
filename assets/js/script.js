@@ -23,9 +23,19 @@ var Timer = setInterval(function(){
 
 let questions = [];
 
-fetch("questions.json").then(res=>{
-    console.log(res);
+fetch("questions.json")
+.then(res => {
+    return res.json();
 })
+.then(loadedQuestions => {
+    console.log(loadedQuestions);
+    questions = loadedQuestions;
+    startGame();
+})
+.catch(err => {
+    console.error(err);
+});
+
 const correctPoints = 10;
 const maxQuestions = 10;
 startGame = () => {
@@ -86,4 +96,4 @@ incrementScore = num => {
 }
        }); 
 
-startGame();
+
